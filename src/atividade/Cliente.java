@@ -22,14 +22,14 @@ public class Cliente {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Cliente window = new Cliente();  //Criação do objeto window
-					window.clienteWindow.setVisible(true);  //Faz a janela ficar visível
+					Cliente window = new Cliente();  //Criaï¿½ï¿½o do objeto window
+					window.clienteWindow.setVisible(true);  //Faz a janela ficar visï¿½vel
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 			}
 		});
-	}
+	}//
 	/**Create the application.**/
 	public Cliente() {
 		inicializarCliente();
@@ -38,7 +38,7 @@ public class Cliente {
 
 	/**Initialize the contents of the frame.*/
 	private void inicializarCliente() {
-		clienteWindow = new JFrame();  //criação do frame(janela)
+		clienteWindow = new JFrame();  //criaï¿½ï¿½o do frame(janela)
 		clienteWindow.getContentPane().setBackground(new Color(153, 204, 255));
 		clienteWindow.setBackground(Color.WHITE);
 		clienteWindow.setTitle("Lanchonete - Novo Pedido");
@@ -57,7 +57,7 @@ public class Cliente {
 		clienteWindow.getContentPane().add(nome);
 		nome.setColumns(10);
 		
-		JButton botaoIniciarPedido = new JButton("Iniciar Pedido");  //Botão que inicia pedido e abre a janela Monte seu Sanduiche, chamando a classe Lanchonete
+		JButton botaoIniciarPedido = new JButton("Iniciar Pedido");  //Botï¿½o que inicia pedido e abre a janela Monte seu Sanduiche, chamando a classe Lanchonete
 		botaoIniciarPedido.setForeground(Color.BLACK);
 		botaoIniciarPedido.setBackground(Color.WHITE);
 		botaoIniciarPedido.addActionListener(new ActionListener() {
@@ -65,10 +65,10 @@ public class Cliente {
 				nomeCliente = nome.getText();  //Recebe a string inserida na caixa de texto
 				if (nomeCliente.isEmpty()==true) {  //Confere se a caixa de texto esta vazia. Caso esteja, aparece uma mensagem de erro
 					JOptionPane.showMessageDialog(clienteWindow,"          Insira seu Nome!","Erro",JOptionPane.WARNING_MESSAGE);
-				}else {  //Caso a caixa de texto não esteja vazia
-				Lanchonete lanchonete = new Lanchonete();  //É criado o objeto lanchonete
-				lanchonete.nameCliente = nomeCliente;  //A variável do nome do cliente é passado entre as janelas
-				lanchonete.lanchoneteWindow.setVisible(true);  //E a janela Monte seu Sanduiche fica visível
+				}else {  //Caso a caixa de texto nï¿½o esteja vazia
+				Lanchonete lanchonete = new Lanchonete();  //ï¿½ criado o objeto lanchonete
+				lanchonete.nameCliente = nomeCliente;  //A variï¿½vel do nome do cliente ï¿½ passado entre as janelas
+				lanchonete.lanchoneteWindow.setVisible(true);  //E a janela Monte seu Sanduiche fica visï¿½vel
 				clienteWindow.dispose();  //E fecha a tela do cliente
 				}
 			}
@@ -77,8 +77,8 @@ public class Cliente {
 		clienteWindow.getContentPane().add(botaoIniciarPedido);		
 }
 
-public void labelsCliente() {  //DAQUI PRA BAIXO, LABELS E DETALHES VISUAIS POUCO RELEVANTES, NÃO MUDAM A FUNCIONALIDADE DO PROGRAMA
-	JLabel labelLanchonete = new JLabel("Lanchonete");  //label título Lanchonete
+public void labelsCliente() {  //DAQUI PRA BAIXO, LABELS E DETALHES VISUAIS POUCO RELEVANTES, Nï¿½O MUDAM A FUNCIONALIDADE DO PROGRAMA
+	JLabel labelLanchonete = new JLabel("Lanchonete");  //label tï¿½tulo Lanchonete
 	labelLanchonete.setForeground(new Color(255, 255, 255));
 	labelLanchonete.setFont(new Font("Bookman Old Style", Font.BOLD, 26));
 	labelLanchonete.setHorizontalAlignment(SwingConstants.CENTER);
